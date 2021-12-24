@@ -1,0 +1,21 @@
+Screen:
+  MDNavigationLayout:
+    ScreenManager:
+      Screen:
+        BoxLayout:
+          orientation: 'vertical'
+          MDToolbar:
+            title: "Navigation Drawer"
+            elevation: 10
+
+            md_bg_color: 1,0,0,1	
+            left_action_items: [["menu", lambda x: root.ids.nav_drawer.toggle_nav_drawer()]]
+            right_action_items: [["logout", lambda x: root.ids.nav_drawer.logout()]]
+
+          Widget:
+          NavigationDrawer:
+            id:nav_drawer
+            md_bg_color: 1,0,0,1
+            ContentNavigationDrawer:
+              id:content_drawer
+  
